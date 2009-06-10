@@ -1,10 +1,24 @@
+/**
+ * jQuery.lifesupport - Smart, simple, and secure session management plugin for jQuery
+ *
+ * version 0.9.0
+ * 
+ * http://michaelmonteleone.net/projects/lifesupport
+ * http://github.com/mmonteleone/jquery.lifesupport
+ *
+ * Copyright (c) 2009 Michael Monteleone
+ * Licensed under terms of the MIT License (README.markdown)
+ */
 (function($) {
 
     // namespace used for internal scoping of client activity events
 	var eventNameSpace = '.lifesupport';
 	
-	  var refresh = function() {};
-	  var logout = function() {};
+	// define stub refresh and logout methods to be implemented
+	// at runtime when plugin applied against a selector
+	// defined here so as to be available to static api
+	var refresh = function() {};
+	var logout = function() {};
 	var halt = function() {};
 	var timeRemaining = function() {};	
 	var running = false;
