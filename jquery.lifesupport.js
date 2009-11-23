@@ -12,17 +12,17 @@
 (function($) {
 
     // namespace used for internal scoping of client activity events
-	var eventNameSpace = '.lifesupport';
-	
-	// define stub refresh and logout methods to be implemented
-	// at runtime when plugin applied against a selector
-	// defined here so as to be available to static api
-	var refresh = function() {};
-	var logout = function() {};
-	var halt = function() {};
-	var timeRemaining = function() {};	
-	var running = false;
-	
+    var eventNameSpace = '.lifesupport';
+    
+    // define stub refresh and logout methods to be implemented
+    // at runtime when plugin applied against a selector
+    // defined here so as to be available to static api
+    var refresh = function() {};
+    var logout = function() {};
+    var halt = function() {};
+    var timeRemaining = function() {};  
+    var running = false;
+    
     $.fn.extend({
         lifesupport: function(options) {
             // if already running, first halt any existing intances
@@ -69,7 +69,7 @@
              * Also triggers a 'logout' event first.
              */
             logout = function() {
-				selection.trigger('logout');
+                selection.trigger('logout');
                 if ($.isFunction(settings.logout)) {
                     reset();
                     settings.logout();
@@ -154,13 +154,13 @@
         lifesupport: function(options) { $(document).lifesupport(options); }
     });
 
-	// static api for directly manipulating lifesupport
-	$.extend($.lifesupport, {
-		stop: function() { halt(); },
-		refresh: function() { refresh(); },
-		logout: function() { logout(); },
-		timeRemaining: function() { return timeRemaining(); }
-	});
+    // static api for directly manipulating lifesupport
+    $.extend($.lifesupport, {
+        stop: function() { halt(); },
+        refresh: function() { refresh(); },
+        logout: function() { logout(); },
+        timeRemaining: function() { return timeRemaining(); }
+    });
 
     // set some default options
     $.extend($.fn.lifesupport, {
@@ -184,8 +184,8 @@
             events: 'click,scroll,resize,keyup', //list of DOM events which the refresh 
                                                  // cycle will consider to infer 
                                                  // client-side user activity
-			clockCycle: 1000,  // clock ticks defaul to 1000 ms (1 second),
-			window: window // allow window dependency to be injected for testing
+            clockCycle: 1000,  // clock ticks defaul to 1000 ms (1 second),
+            window: window // allow window dependency to be injected for testing
         }
     });
 
