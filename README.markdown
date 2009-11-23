@@ -25,11 +25,11 @@ When used in conjunction with SSL and prudent avoidance of common web threats su
 *Common usability (and security) problem scenarios:*
 
 1. **False positives for inactive users:** An authenticated user is perhaps digesting a long page or completing a very complicated form that might take longer than 20 minutes.  She clicks 'save' and suddenly realizes she's no longer logged in since her cookie expired after 20 minutes of no HTTP requests, and even worse, she probably lost all her hard work on the previous form.
-  -  The user had no warning her session was about to die
-  -  The user sees no reason it should have, as from her perspective, she had indeed been "active".
-  -  Some solutions to this involve transparently pinging the server via AJAX in order to always have a fresh cookie.  But this is often implemented such that even truly inactive users will continue to have their cookies renewed by the pinging page, thereby breaking the security of having a timeout in the first place.
+    * The user had no warning her session was about to die
+    * The user sees no reason it should have, as from her perspective, she had indeed been "active".
+    * Some solutions to this involve transparently pinging the server via AJAX in order to always have a fresh cookie.  But this is often implemented such that even truly inactive users will continue to have their cookies renewed by the pinging page, thereby breaking the security of having a timeout in the first place.
 2. **No browser knowledge of the expired cookie:**  An authenticatied user leaves browser open to sensitive data and leaves workstation.  Even though the cookie might have expired after 20 minutes, the sensitive data still sits wide open on the user's screen.
-  -  Some solutions to this involve displaying a popup warning near the end of the lifespan, but the popup is often implemented such that it is popup-blocked, or worse, not smart enough to know that a user has truly been active on the page even though she hasn't made a recent HTTP request (see above).
+    * Some solutions to this involve displaying a popup warning near the end of the lifespan, but the popup is often implemented such that it is popup-blocked, or worse, not smart enough to know that a user has truly been active on the page even though she hasn't made a recent HTTP request (see above).
 
 Life support's solution
 -----------------------
