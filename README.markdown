@@ -72,7 +72,7 @@ jQuery.lifesupport requires only [jquery][3] 1.3.2, and can be installed thusly:
 
 jQuery.lifesupport includes a full unit test suite, and has been verified to work against Firefox 3.5, Safari 4, Internet Explorer 6,7,8, Chrome, and Opera 9 and 10.  Please feel free to test its suite against other browsers.
 
-If you also happen to be using [jQuery.safetynet](9) to warn users before leaving an unsubmitted form, jQuery.lifesupport will suppress its warning message before performing a logout redirect.
+If you also happen to be using [jQuery.safetynet][9] to warn users before leaving an unsubmitted form, jQuery.lifesupport will suppress its warning message before performing a logout redirect.
 
 Complete API
 ------------
@@ -143,7 +143,7 @@ The following build tasks are available:
 Changelog
 ---------
 
-* 0.9.1 - Added support for [jQuery.safetynet](9), where if safetynet is defined and being used, suppresses warnings before a logout redirect.  Also updated to latest qunit.
+* 0.9.1 - Added support for [jQuery.safetynet][9], where if safetynet is defined and being used, suppresses warnings before a logout redirect.  Also updated to latest qunit.
 * 0.9.0 - Initial Release
 
 License
