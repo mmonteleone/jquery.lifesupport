@@ -141,6 +141,7 @@ The following build tasks are available:
 Changelog
 ---------
 
+* 0.9.1 - Added support for jQuery.safetynet, where if safetynet is defined and being used, suppresses warnings before a logout redirect.  Also updated to latest qunit.
 * 0.9.0 - Initial Release
 
 License

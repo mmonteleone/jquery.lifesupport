@@ -75,6 +75,9 @@
                     settings.logout();
                 } else {
                     reset();
+                    if($.safetynet !== undefined && $.safetynet.suppressed !== undefined) {
+                        $.safetynet.suppressed(true);
+                    }
                     settings.window.location = settings.logout;
                 }
             };
@@ -164,7 +167,7 @@
 
     // set some default options
     $.extend($.fn.lifesupport, {
-        version: '0.9.0',
+        version: '0.9.1',
         defaults: {
             refresh: function() { }, // either A URL to be requested against via 
                                      // AJAX, or an anonymous function to be

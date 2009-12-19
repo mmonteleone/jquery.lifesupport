@@ -206,7 +206,7 @@ QUnit.specify("jQuery.lifesupport", function() {
                             assert(requestedUrl).equals('http://ping.url');
                         });                     
                     });
-                    
+                                        
                     it("should append randomized querystring to end of url requests", function(){
                         // mock the ajax $.get method
                         var originalGet = $.get;
@@ -484,6 +484,33 @@ QUnit.specify("jQuery.lifesupport", function() {
                 });
                 
                 describe('when [logout] option is a url', function(){
+                    
+                    it('should call $.safetynet.suppress(true) if $.safetynet is defined', function(){
+                        // set up a mock object to simulate and track window relocating                        
+                        $(document)
+                            .lifesupport({
+                                events: 'fakeevent',
+                                lifetime: 5,
+                                clockCycle: clockCycle,
+                                logout: 'http://test.host',
+                                window: mockWindow
+                            });
+                        
+                        var suppressed = false;    
+                        $.safetynet = {
+                            suppressed: function(val) {
+                                suppressed = val;                                
+                            }
+                        };
+
+                        // wait until logout would have occurred
+                        mockWait(5 * clockCycle + 1, function(){
+                            // verify safetynet was suppressed
+                            assert(suppressed).isTrue();
+                            delete $['safetynet'];
+                        });                        
+                        
+                    });
                     
                     it('should [window.relocate] to [logout] url', function(){
                         // set up a mock object to simulate and track window relocating                        
