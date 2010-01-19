@@ -65,12 +65,12 @@ Simply download [jquery.lifesupport.js][7] and include it.
 
 Alternatively, you can download the [zipped release][8] containing a minified build with examples and documentation or the development master with unit tests by cloning `git://github.com/mmonteleone/jquery.lifesupport.git`.
 
-jQuery.lifesupport requires only [jquery][3] 1.3.2, and can be installed thusly:
+jQuery.lifesupport requires only [jquery][3] 1.3.2 or greater, and can be installed thusly:
 
-    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="jquery-1.4.min.js"></script>
     <script type="text/javascript" src="jquery.lifesupport.min.js"></script>
 
-jQuery.lifesupport includes a full unit test suite, and has been verified to work against Firefox 3.5, Safari 4, Internet Explorer 6,7,8, Chrome, and Opera 9 and 10.  Please feel free to test its suite against other browsers.
+jQuery.lifesupport includes a full unit test suite, and has been verified to work against Firefox 3.5, Safari 4, Internet Explorer 6,7,8, Chrome, and Opera 10 with both jQuery 1.3 and 1.4.  Please feel free to test its suite against other browsers.
 
 If you also happen to be using [jQuery.safetynet][9] to warn users before leaving an unsubmitted form, jQuery.lifesupport will suppress its warning message before performing a logout redirect.
 
