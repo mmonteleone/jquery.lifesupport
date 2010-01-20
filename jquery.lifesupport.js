@@ -1,7 +1,7 @@
 /**
  * jQuery.lifesupport - Smart, simple, and secure session management plugin for jQuery
  *
- * version 0.9.0
+ * version 0.9.1
  *
  * http://michaelmonteleone.net/projects/lifesupport
  * http://github.com/mmonteleone/jquery.lifesupport
