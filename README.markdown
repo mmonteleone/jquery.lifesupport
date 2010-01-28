@@ -67,7 +67,7 @@ Alternatively, you can download the [zipped release][8] containing a minified bu
 
 jQuery.lifesupport requires only [jquery][3] 1.3.2 or greater, and can be installed thusly:
 
-    <script type="text/javascript" src="jquery-1.4.min.js"></script>
+    <script type="text/javascript" src="jquery-1.4.1.min.js"></script>
     <script type="text/javascript" src="jquery.lifesupport.min.js"></script>
 
 jQuery.lifesupport includes a full unit test suite, and has been verified to work against Firefox 3.5, Safari 4, Internet Explorer 6,7,8, Chrome, and Opera 10 with both jQuery 1.3 and 1.4.  Please feel free to test its suite against other browsers.
